@@ -1,0 +1,224 @@
+light = False
+key = False
+print("You now have to survive 5 nights with Raian")
+print("You will be paid £50 for each day survived by criminals")
+print("He doesn't know you are in his house so don't get caught")
+print("After 1st day door is locked and requires a key")
+ 
+
+
+def pizzaroom():
+  enter = input("Do you want to enter Pizza Room?")
+  if enter[0] == "y" or enter[0] == "Y":
+    death1()
+  else:
+   livingroom()
+
+def death1():
+  print("Raian saw you and chopped off all the limbs in your body")
+  print("Game Over")
+
+def livingroom():
+  choice1 = input("You see a vase spin out of control. Do you stop it from falling? ")
+  if choice1[0] == "y" or choice1[0] == "Y":
+    bigdecision()
+  else:
+    death2()
+
+def death2():
+  print("Raian ran to livingroom and caught you")
+  print("Game over")
+
+def bigdecision():
+  choice2 = input("Raian is near where you are. Do you turn on light to see better?")
+  if choice2[0] == "y" or choice2[0] ==  "Y":
+    light = True
+    lightday1()
+  else:
+    day1()
+
+def lightday1():
+  choice3 = input("Do you want to leave?")
+  if choice3[0] == "y" or choice3[0] == "Y":
+    print ("You saw Raian but when he left you went to the exit")
+    print("You survived")
+  else:
+    upstairs()
+
+def day1():
+  choice4 = input("Do you want to leave?")
+  if choice4[0] == "y" or choice4[0] == "Y":
+    print("You weren't able to see Raian without the light so he caught you")
+    print("You died")
+    print("Game over")
+  else:
+    upstairs()
+
+def upstairs():
+  choice5 = input("Do you want to go to the Bathroom?")
+  if choice5[0] == "y" or choice5[0] == "Y":
+    print("Raian found you in the toilet")
+    print("Raian put your head in the toilet")
+    print("You died")
+  else:
+    bedroom()
+
+def bedroom():
+  print("Its the second day")
+  choice6 = input("Do you want to go to the bedroom? Else you will try and leave.")
+  
+  if choice6[0] == "y" or choice6[0] == "Y":
+    bed()
+  else:
+    door()
+
+def bed():
+  choice7 = input("Do you want to sleep in his bed")
+  if choice7[0] == "y" or choice7[0] == "Y":
+    print("Raian hears a creak in bed and jumps on the bed with you ")
+    print("He then ate you in the pizza room")
+  else:
+    drawer()
+
+def door():
+  print("You try to open door but realise its locked")
+  print("Raian finds you and cooks you into a curry")
+  
+def drawer():
+  print("You found key")
+  key = True
+  newdoor()
+
+def newdoor():
+  choice8 = input("Do you finally want to leave?")
+  if choice8[0] == "y" or choice8[0] == "Y":
+    print("Well Done, you survived with £250")
+  else:
+    print("ok")
+    basement()
+
+def basement():
+  print("You go to the basement")
+  print("Raian finds you and asks you to give a good picture to make him trust you")
+  choice9 = input("Do you give him a picture of a random person?")
+  if choice9[0] == "y" or choice9[0] == "Y":
+    print("It was a picture of Soham and Kavi")
+    print("You died")
+  else:
+    print("You told him a lie and he believes it and trusts you")
+    print("You survived... Or maybe not")
+    downstairs()
+    
+def downstairs():
+  print("You go downstairs but he changes his mind on you.")
+  print("He grabs a knife and shield and charges on to you")
+  choice10 = input("Do you want to hide in the drawers or vents?(answer exactly how i typed in choice)")  
+  if choice10 == "drawers":
+    print("You didn't fit in drawers")
+    print("You died")
+  else:
+    print("You fit into vent and go into a secret room")
+    secretroom()
+  
+    
+def secretroom():
+  print("Welcome to the secret endings")
+  print("You see that Raian has been hiding a big secret")
+  print("Raian has been a part of criminal activities in this room")
+  choice11 = input("Do you want to expose secret right now online?")
+  if choice11[0] == "y" or choice11[0] == "Y":
+    print("You expose it to the internet")
+    print("Raian immediately goes into room")
+    print("Raian live streams killing you")
+  else:
+    print("You slowly leave holding evidence and leave")
+    policestation()
+
+def policestation():
+  print("You are thinking about snitching about Raian's deadly crimes")
+  choice12 = input("Do you want to do it")
+  if choice12[0] == "y" or choice12[0] == "Y":
+    print("You snitch to police and Raian is in prison for 25 years")
+    print("You survived")
+  else:
+    print("You are thinking about joining Raian")
+    house()
+
+def house():
+  print("You decide to ask Raian to join his group and commit deadly acts")
+  print("You will be the villain")
+  choice13 = input("Would you change your mind mid sentence and not want to join?")
+  if choice13[0] == "y" or choice13[0] ==  "Y":
+    print("Raian kills you as you have too much information")
+  else:
+    print("He says yes and makes another variant of Raian")
+    print("In your next game, you are Raian")
+    newpizzaroom()
+    
+def newpizzaroom():
+  print("You see a guy called Olaf Grela in pizza room")
+  choice14 = input("Do you kill him?")
+  if choice14[0] == "y" or choice14[0] == "Y":
+    print("Olaf gets cooked in the pizza room into a pizza")
+  else:
+    print("Why would you let him go, you are a killer!")
+  newbasement()
+
+def newbasement():
+  print("You see a guy called Arkash Asokarajan in basement")
+  choice15 = input("Do you want to kill him?")
+  if choice15[0] == "y" or choice15[0] == "Y":
+    print("Arkash got thrown from the stairs and cracked his head open")
+  else:
+    print("Why would you let him go, you are a killer!")
+  newbedroom()
+
+def newbedroom():
+  print("You see a guy called Lavlin Singh")
+  choice16 = input("Do you want to kill him?")
+  if choice16[0] == "y" or choice16[0] ==  "Y":
+    print("You kill him on a tiktok live")
+  else:
+    print("Why would you let him go, you are a killer!")
+  newhouse()
+
+def newhouse():
+  print("You see someone called Idrees Noori")
+  choice20 = input("Do you want to kill him?")
+  if choice20[0] == "y" or choice20[0] == "Y":
+    print("Idrees is killed by getting his head flushed into toilet")
+    newbathroom()
+  else:
+    print("Idrees convinces you to join a terrorist group")
+    choice21 = input("Will you say yes?")
+    if choice21[0] == "y" or choice21[0] == "Y":
+      print("You betray Raian and kill him")
+      print("You are now a part of Idrees's group")
+    else:
+      print("He kills you by throwing a bomb at you")
+
+def newbathroom():
+  print("You see a guy called Kacper Kazimirowicz")
+  print("You see a harness underneath clothes")
+  choice17 = input("Do you want to kill him?")
+  if choice17[0] == "y" or choice17[0] ==  "Y":
+    print("Kacper was a police officer and he shot you with a gun")
+  else:
+    print("He left after 1 hour of searching the area")
+    newlivingroom()
+
+def newlivingroom():
+  print("You see a guy called Soham Mevada")
+  choice18 = input("Do you want to kill him?")
+  if choice18[0] == "y" or choice18[0] == "Y":
+    print("You torture him for 5 months, leaving him almost starving")
+    print("You beat him to death everyday as he is crying for help")
+    print("You impressed everyone and is now permanently Raian")
+  else:
+    print("You should have killed him")
+    print("He kills you out of nowhere")
+  
+pizzaroom()
+
+
+
